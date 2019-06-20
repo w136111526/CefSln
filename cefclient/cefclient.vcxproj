@@ -232,6 +232,7 @@
     <LinkIncremental>false</LinkIncremental>
     <OutDir>../build/</OutDir>
     <IncludePath>$(SolutionDir)sdk\cef;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)build\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

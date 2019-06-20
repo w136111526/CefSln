@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libcef_dll", "libcef_dll\libcef_dll.vcxproj", "{8D8DE242-4755-4A84-910A-C9E618C8692D}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cefclient", "cefclient\cefclient.vcxproj", "{B53C5DF0-E612-497C-96F0-C27E80579B61}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8D8DE242-4755-4A84-910A-C9E618C8692D} = {8D8DE242-4755-4A84-910A-C9E618C8692D}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
