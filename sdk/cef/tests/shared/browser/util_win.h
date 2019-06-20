@@ -8,7 +8,7 @@
 
 #include <windows.h>
 #include <string>
-
+#include <stdint.h>
 #include "include/internal/cef_types_wrappers.h"
 
 namespace client {
