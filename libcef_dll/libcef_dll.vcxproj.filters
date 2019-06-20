@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="base">
+      <UniqueIdentifier>{9e01b08a-ba11-4427-b152-28113d28dc14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cpptoc">
+      <UniqueIdentifier>{5ad48e51-8083-4d77-9dd0-307a17e598c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ctocpp">
+      <UniqueIdentifier>{f8036be2-e11a-4235-a4e4-bac8f035187f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="wrapper">
+      <UniqueIdentifier>{41c7fa4d-52db-4b25-83b7-4a3e76d3fbe5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cpptoc\test">
+      <UniqueIdentifier>{a17627ac-5cbd-4a38-bd9a-db545ef42514}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cpptoc\views">
+      <UniqueIdentifier>{ab221e3d-87c6-49c5-b6a7-236b403fbe81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ctocpp\views">
+      <UniqueIdentifier>{364a9600-9740-4e5b-8369-c883fb8c7ae9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ctocpp\test">
+      <UniqueIdentifier>{fbb72faf-7cb5-46b3-852a-08d757313c6b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>
