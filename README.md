@@ -14,4 +14,12 @@ __cdecl client::d3d11::Device::create(void)" (?create@Device@d3d11@client@@SA?AV
 解决方法：
 #pragma comment(lib, "D3D11.lib")
 
+osr_ime_handler_win.obj : error LNK2019: 无法解析的外部符号 _ImmGetContext@4，该符号在函数 "public: virtual void __thiscall client::OsrImeHandlerWin::CancelIME(void)" (?CancelIME@OsrImeHandlerWin@client@@UAEXXZ) 中被引用
+1>osr_ime_handler_win.obj : error LNK2019: 无法解析的外部符号 _ImmReleaseContext@8，该符号在函数 "public: virtual void __thiscall client::OsrImeHandlerWin::CancelIME(void)" (?CancelIME@OsrImeHandlerWin@client@@UAEXXZ) 中被引用
+1>osr_ime_handler_win.obj : error LNK2019: 无法解析的外部符号 _ImmAssociateContextEx@12，该符号在函数 "public: virtual void __thiscall client::OsrImeHandlerWin::DisableIME(void)" (?DisableIME@OsrImeHandlerWin@client@@UAEXXZ) 中被引用
+1>osr_ime_handler_win.obj : error LNK2019: 无法解析的外部符号 _ImmGetCompositionStringW@16，该符号在函数 "private: void __thiscall client::OsrImeHandlerWin::GetCompositionInfo(struct HIMC__ *,long,class CefStringBase<struct CefStringTraitsUTF16> 
+1>osr_ime_handler_win.obj : error LNK2019: 无法解析的外部符号 _ImmNotifyIME@16，该符号在函数 "public: virtual void __thiscall client::OsrImeHandlerWin::CancelIME(void)" (?CancelIME@OsrImeHandlerWin@client@@UAEXXZ) 中被引用
+1>osr_ime_handler_win.obj : error LNK2019: 无法解析的外部符号 _ImmSetCandidateWindow@8，该符号在函数 "public: void __thiscall client::OsrImeHandlerWin::MoveImeWindow(void)" (?MoveImeWindow@OsrImeHandlerWin@client@@QAEXXZ) 中被引用
+#pragma comment(lib, "imm32.lib")
+
 
