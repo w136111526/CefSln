@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\binding_test.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\browser_window.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\browser_window_osr_win.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\browser_window_std_win.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\bytes_write_handler.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\client_app_delegates_browser.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\client_browser.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\client_handler.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\client_handler_osr.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\client_handler_std.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\dialog_test.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\drm_test.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\image_cache.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\main_context.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\main_context_impl.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\main_context_impl_win.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\main_message_loop_multithreaded_win.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\osr_accessibility_helper.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\osr_accessibility_node.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\osr_accessibility_node_win.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\osr_d3d11_win.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\osr_dragdrop_win.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\osr_ime_handler_win.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\osr_renderer.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\osr_render_handler_win.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\osr_render_handler_win_d3d11.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\osr_render_handler_win_gl.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\osr_window_win.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\preferences_test.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\resource_util_win_idmap.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\response_filter_test.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\root_window.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\root_window_create.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\root_window_manager.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\root_window_views.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\root_window_win.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\scheme_test.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\server_test.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\temp_window_win.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\test_runner.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\urlrequest_test.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\views_menu_bar.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\views_style.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\views_window.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\window_test.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\window_test_runner.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\window_test_runner_views.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\browser\window_test_runner_win.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\cefclient_win.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\common\client_app_delegates_common.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\common\scheme_test_common.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\renderer\client_app_delegates_renderer.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\renderer\client_renderer.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\renderer\performance_test.cc" />
+    <ClCompile Include="..\sdk\cef\tests\cefclient\renderer\performance_test_tests.cc" />
+    <ClCompile Include="..\sdk\cef\tests\shared\browser\client_app_browser.cc" />
+    <ClCompile Include="..\sdk\cef\tests\shared\browser\extension_util.cc" />
+    <ClCompile Include="..\sdk\cef\tests\shared\browser\file_util.cc" />
+    <ClCompile Include="..\sdk\cef\tests\shared\browser\geometry_util.cc" />
+    <ClCompile Include="..\sdk\cef\tests\shared\browser\main_message_loop.cc" />
+    <ClCompile Include="..\sdk\cef\tests\shared\browser\main_message_loop_external_pump.cc" />
+    <ClCompile Include="..\sdk\cef\tests\shared\browser\main_message_loop_external_pump_win.cc" />
+    <ClCompile Include="..\sdk\cef\tests\shared\browser\main_message_loop_std.cc" />
+    <ClCompile Include="..\sdk\cef\tests\shared\browser\resource_util_win.cc" />
+    <ClCompile Include="..\sdk\cef\tests\shared\browser\util_win.cc" />
+    <ClCompile Include="..\sdk\cef\tests\shared\common\client_app.cc" />
+    <ClCompile Include="..\sdk\cef\tests\shared\common\client_app_other.cc" />
+    <ClCompile Include="..\sdk\cef\tests\shared\common\client_switches.cc" />
+    <ClCompile Include="..\sdk\cef\tests\shared\renderer\client_app_renderer.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\binding_test.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\browser_window.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\browser_window_osr_win.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\browser_window_std_win.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\bytes_write_handler.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\client_browser.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\client_handler.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\client_handler_osr.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\client_handler_std.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\client_types.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\dialog_test.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\drm_test.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\image_cache.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\main_context.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\main_context_impl.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\main_message_loop_multithreaded_win.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\osr_accessibility_helper.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\osr_accessibility_node.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\osr_d3d11_win.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\osr_dragdrop_events.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\osr_dragdrop_win.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\osr_ime_handler_win.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\osr_renderer.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\osr_renderer_settings.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\osr_render_handler_win.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\osr_render_handler_win_d3d11.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\osr_render_handler_win_gl.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\osr_window_win.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\preferences_test.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\resource.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\response_filter_test.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\root_window.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\root_window_manager.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\root_window_views.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\root_window_win.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\scheme_test.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\server_test.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\temp_window.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\temp_window_win.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\test_runner.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\urlrequest_test.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\views_menu_bar.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\views_style.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\views_window.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\window_test.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\window_test_runner.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\window_test_runner_views.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\browser\window_test_runner_win.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\common\scheme_test_common.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\renderer\client_renderer.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\renderer\performance_test.h" />
+    <ClInclude Include="..\sdk\cef\tests\cefclient\renderer\performance_test_setup.h" />
+    <ClInclude Include="..\sdk\cef\tests\shared\browser\client_app_browser.h" />
+    <ClInclude Include="..\sdk\cef\tests\shared\browser\extension_util.h" />
+    <ClInclude Include="..\sdk\cef\tests\shared\browser\file_util.h" />
+    <ClInclude Include="..\sdk\cef\tests\shared\browser\geometry_util.h" />
+    <ClInclude Include="..\sdk\cef\tests\shared\browser\main_message_loop.h" />
+    <ClInclude Include="..\sdk\cef\tests\shared\browser\main_message_loop_external_pump.h" />
+    <ClInclude Include="..\sdk\cef\tests\shared\browser\main_message_loop_std.h" />
+    <ClInclude Include="..\sdk\cef\tests\shared\browser\resource_util.h" />
+    <ClInclude Include="..\sdk\cef\tests\shared\browser\util_win.h" />
+    <ClInclude Include="..\sdk\cef\tests\shared\common\client_app.h" />
+    <ClInclude Include="..\sdk\cef\tests\shared\common\client_app_other.h" />
+    <ClInclude Include="..\sdk\cef\tests\shared\common\client_switches.h" />
+    <ClInclude Include="..\sdk\cef\tests\shared\renderer\client_app_renderer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\sdk\cef\tests\cefclient\resources\extensions\set_page_color\icon.png" />
+    <Image Include="..\sdk\cef\tests\cefclient\resources\logo.png" />
+    <Image Include="..\sdk\cef\tests\cefclient\resources\menu_icon.1x.png" />
+    <Image Include="..\sdk\cef\tests\cefclient\resources\menu_icon.2x.png" />
+    <Image Include="..\sdk\cef\tests\cefclient\resources\win\cefclient.ico" />
+    <Image Include="..\sdk\cef\tests\cefclient\resources\win\small.ico" />
+    <Image Include="..\sdk\cef\tests\shared\resources\window_icon.1x.png" />
+    <Image Include="..\sdk\cef\tests\shared\resources\window_icon.2x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\sdk\cef\tests\cefclient\resources\binding.html" />
+    <None Include="..\sdk\cef\tests\cefclient\resources\dialogs.html" />
+    <None Include="..\sdk\cef\tests\cefclient\resources\draggable.html" />
+    <None Include="..\sdk\cef\tests\cefclient\resources\drm.html" />
+    <None Include="..\sdk\cef\tests\cefclient\resources\extensions\set_page_color\manifest.json" />
+    <None Include="..\sdk\cef\tests\cefclient\resources\extensions\set_page_color\popup.html" />
+    <None Include="..\sdk\cef\tests\cefclient\resources\extensions\set_page_color\popup.js" />
+    <None Include="..\sdk\cef\tests\cefclient\resources\extensions\set_page_color\README.md" />
+    <None Include="..\sdk\cef\tests\cefclient\resources\localstorage.html" />
+    <None Include="..\sdk\cef\tests\cefclient\resources\other_tests.html" />
+    <None Include="..\sdk\cef\tests\cefclient\resources\performance.html" />
+    <None Include="..\sdk\cef\tests\cefclient\resources\performance2.html" />
+    <None Include="..\sdk\cef\tests\cefclient\resources\preferences.html" />
+    <None Include="..\sdk\cef\tests\cefclient\resources\response_filter.html" />
+    <None Include="..\sdk\cef\tests\cefclient\resources\server.html" />
+    <None Include="..\sdk\cef\tests\cefclient\resources\transparency.html" />
+    <None Include="..\sdk\cef\tests\cefclient\resources\urlrequest.html" />
+    <None Include="..\sdk\cef\tests\cefclient\resources\websocket.html" />
+    <None Include="..\sdk\cef\tests\cefclient\resources\window.html" />
+    <None Include="..\sdk\cef\tests\cefclient\resources\xmlhttprequest.html" />
+    <None Include="..\sdk\cef\tests\shared\resources\osr_test.html" />
+    <None Include="..\sdk\cef\tests\shared\resources\pdf.html" />
+    <None Include="..\sdk\cef\tests\shared\resources\pdf.pdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="..\sdk\cef\tests\cefclient\resources\win\cefclient.exe.manifest" />
+    <Manifest Include="..\sdk\cef\tests\cefclient\resources\win\compatibility.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\sdk\cef\tests\cefclient\resources\win\cefclient.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\sdk\cef\tests\cefclient\resources\win\README-TRANSFER.txt" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B53C5DF0-E612-497C-96F0-C27E80579B61}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>cefclient</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>../build/</OutDir>
+    <IncludePath>$(SolutionDir)sdk\cef;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>../build/</OutDir>
+    <IncludePath>$(SolutionDir)sdk\cef;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
