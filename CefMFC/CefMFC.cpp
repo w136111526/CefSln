@@ -90,6 +90,7 @@ BOOL CCefMFCApp::InitInstance()
 		cSettings.multi_threaded_message_loop = true;
 		cSettings.no_sandbox = true;
 		cSettings.ignore_certificate_errors = true;		//忽略掉ssl证书验证错误
+		CefString(&cSettings.locale).FromASCII("zh-CN");
 
 		CefRefPtr<CefApp>spApp;
 		CefInitialize(main_args, cSettings, spApp, NULL);
