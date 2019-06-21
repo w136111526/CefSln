@@ -6,11 +6,13 @@
 #include "CefMFC.h"
 #include "CefMFCDlg.h"
 #include "afxdialogex.h"
+#include "CefHelper/CefHandlerImpl.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
 
+CefRefPtr<CCefHandlerImpl>  g_BrowsersHandler = new CCefHandlerImpl;
 
 // 用于应用程序“关于”菜单项的 CAboutDlg 对话框
 
@@ -98,6 +100,19 @@ BOOL CCefMFCDlg::OnInitDialog()
 	SetIcon(m_hIcon, FALSE);		// 设置小图标
 
 	// TODO:  在此添加额外的初始化代码
+	CefWindowInfo info;
+	RECT rect;
+	GetClientRect(&rect);
+	RECT rectnew = rect;
+	rectnew.top = rect.top + 30;
+	rectnew.bottom = rect.bottom;
+	rectnew.left = rect.left;
+	rectnew.right = rect.right;
+	info.SetAsChild(GetSafeHwnd(), rectnew);
+	CefBrowserSettings browserSettings;
+
+	CefBrowserHost::CreateBrowser(info, g_BrowsersHandler.get(),
+		"https://cn.bing.com/", browserSettings, NULL, NULL);
 
 	return TRUE;  // 除非将焦点设置到控件，否则返回 TRUE
 }
@@ -158,4 +173,13 @@ void CCefMFCDlg::OnSize(UINT nType, int cx, int cy)
 	CDialogEx::OnSize(nType, cx, cy);
 
 	// TODO:  在此处添加消息处理程序代码
+	if (g_BrowsersHandler.get())
+	{
+		CefRefPtr<CefBrowser>browser = g_BrowsersHandler->GetBrowser(m_hWnd);
+		if (browser)
+		{
+			CefWindowHandle hwnd = browser->GetHost()->GetWindowHandle();
+			::MoveWindow(hwnd, 0, 60, cx, cy - 60, true);
+		}
+	}
 }
