@@ -111,6 +111,7 @@ BOOL CCefMFCDlg::OnInitDialog()
 	rectnew.right = rect.right;
 	info.SetAsChild(GetSafeHwnd(), rectnew);
 	CefBrowserSettings browserSettings;
+	
 
 	CefBrowserHost::CreateBrowser(info, g_BrowsersHandler.get(),
 		"https://cn.bing.com/", browserSettings, NULL, NULL);
