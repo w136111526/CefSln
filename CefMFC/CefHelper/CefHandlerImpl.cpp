@@ -171,23 +171,16 @@ void CCefHandlerImpl::OnContextInitialized()
 
 void CCefHandlerImpl::OnBeforeCommandLineProcessing(const CefString& process_type, CefRefPtr<CefCommandLine> command_line)
 {
-	AfxMessageBox(_T("CCefHandlerImpl::OnBeforeCommandLineProcessing"));
-	OutputDebugStringA("CCefHandlerImpl::OnBeforeCommandLineProcessing");
+	//AfxMessageBox(_T("CCefHandlerImpl::OnBeforeCommandLineProcessing"));
+	//OutputDebugStringA("CCefHandlerImpl::OnBeforeCommandLineProcessing");
 	command_line->AppendSwitch("--disable-web-security");	// 关闭同源策略
-	command_line->AppendSwitch("--enable-system-flash");	// 使用系统flash
+	//command_line->AppendSwitch("--enable-system-flash");	// 使用系统flash
 	command_line->AppendSwitchWithValue("--ppapi-flash-version", "32.0.0.207");
 	command_line->AppendSwitchWithValue("--ppapi-flash-path", "PepperFlash\\pepflashplayer.dll");
 
-	//加载flash插件
-	//command_line->AppendSwitchWithValue("--ppapi-flash-path", "ppflash/18_0_0_209/pepflashplayer32_18_0_0_209.dll");
-	//manifest.json中的version
-	//command_line->AppendSwitchWithValue("--ppapi-flash-version", "18.0.0.209");
-
-
 	// 此参数解决多窗口问题
-	//command_line->AppendSwitch("process-per-site");
-	//command_line->AppendSwitch("enable-npapi");
-	//command_line->AppendSwitchWithValue("register-pepper-plugins", "PepperFlash\\pepflashplayer.dll;application/x-shockwave-flash");
+	command_line->AppendSwitch("process-per-site");
+	
 }
 
 void CCefHandlerImpl::OnBeforeChildProcessLaunch(CefRefPtr<CefCommandLine> command_line)

@@ -6,6 +6,7 @@
 #include "CefMFC.h"
 #include "CefMFCDlg.h"
 #include <cef\include\cef_app.h>
+#include <CefHelper\CefHandlerImpl.h>
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -92,8 +93,8 @@ BOOL CCefMFCApp::InitInstance()
 		cSettings.ignore_certificate_errors = true;		//忽略掉ssl证书验证错误
 		CefString(&cSettings.locale).FromASCII("zh-CN");
 
-		CefRefPtr<CefApp>spApp;
-		CefInitialize(main_args, cSettings, spApp, NULL);
+		CefRefPtr<CCefHandlerImpl> cefHandlerImpl = new CCefHandlerImpl;
+		CefInitialize(main_args, cSettings, cefHandlerImpl, NULL);
 	}
 
 	CCefMFCDlg dlg;
