@@ -76,9 +76,9 @@ BOOL CCefMFCApp::InitInstance()
 	{
 		CefEnableHighDPISupport();
 
-
+		CefRefPtr<CCefHandlerImpl> cefHandlerImpl = new CCefHandlerImpl;
 		CefMainArgs main_args(m_hInstance);
-		int exitCode = CefExecuteProcess(main_args, NULL, NULL);
+		int exitCode = CefExecuteProcess(main_args, cefHandlerImpl, NULL);
 		if (exitCode >= 0)
 		{
 			return exitCode;
@@ -93,8 +93,9 @@ BOOL CCefMFCApp::InitInstance()
 		cSettings.ignore_certificate_errors = true;		//忽略掉ssl证书验证错误
 		CefString(&cSettings.locale).FromASCII("zh-CN");
 		CefString(&cSettings.cache_path).FromASCII("cache");
+		
 
-		CefRefPtr<CCefHandlerImpl> cefHandlerImpl = new CCefHandlerImpl;
+		
 		CefInitialize(main_args, cSettings, cefHandlerImpl, NULL);
 	}
 
