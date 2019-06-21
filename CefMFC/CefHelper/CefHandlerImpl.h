@@ -19,7 +19,10 @@ public:
 
 	static  CCefHandlerImpl *getInstance();
 
-	
+	// Execute Delegate notifications on the main thread.
+	void NotifyBrowserCreated(CefRefPtr<CefBrowser> browser);
+	void NotifyBrowserClosing(CefRefPtr<CefBrowser> browser);
+	void NotifyBrowserClosed(CefRefPtr<CefBrowser> browser);
 
 	// CefClient methods:
 	virtual CefRefPtr<CefDisplayHandler> GetDisplayHandler() OVERRIDE{
@@ -61,6 +64,9 @@ private:
 
 	// True if the application is using the Views framework.
 	const bool use_views_;
+
+	// The current number of browsers using this handler.
+	int browser_count_;
 
 	// List of existing browser windows. Only accessed on the CEF UI thread.
 	typedef std::list<CefRefPtr<CefBrowser>> BrowserList;

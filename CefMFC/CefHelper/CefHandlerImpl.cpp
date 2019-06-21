@@ -4,7 +4,8 @@
 
 CCefHandlerImpl::CCefHandlerImpl():
 use_views_(false), 
-is_closing_(false)
+is_closing_(false),
+browser_count_(0)
 {
 
 }
@@ -44,7 +45,7 @@ void CCefHandlerImpl::OnTitleChange(CefRefPtr<CefBrowser> browser, const CefStri
 void CCefHandlerImpl::OnAfterCreated(CefRefPtr<CefBrowser> browser)
 {
 	CEF_REQUIRE_UI_THREAD();
-
+	browser_count_++;
 	HWND hHostWnd = browser->GetHost()->GetWindowHandle(); //PP: 这里获得窗口句柄是浏览器页面的Host句柄，可能是主窗口里的一个子窗口
 
 	// Add to the list of existing browsers.
@@ -71,6 +72,11 @@ bool CCefHandlerImpl::DoClose(CefRefPtr<CefBrowser> browser)
 void CCefHandlerImpl::OnBeforeClose(CefRefPtr<CefBrowser> browser)
 {
 	CEF_REQUIRE_UI_THREAD();
+
+	if (--browser_count_ == 0)
+	{
+
+	}
 
 	// Remove from the list of existing browsers.
 	BrowserList::iterator bit = browser_list_.begin();
@@ -137,4 +143,19 @@ void CCefHandlerImpl::PlatformTitleChange(CefRefPtr<CefBrowser> browser, const C
 {
 	CefWindowHandle hwnd = browser->GetHost()->GetWindowHandle();
 	SetWindowText(hwnd, std::wstring(title).c_str());
+}
+
+void CCefHandlerImpl::NotifyBrowserCreated(CefRefPtr<CefBrowser> browser)
+{
+	
+}
+
+void CCefHandlerImpl::NotifyBrowserClosing(CefRefPtr<CefBrowser> browser)
+{
+	
+}
+
+void CCefHandlerImpl::NotifyBrowserClosed(CefRefPtr<CefBrowser> browser)
+{
+	
 }
