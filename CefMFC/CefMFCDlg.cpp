@@ -114,6 +114,7 @@ BOOL CCefMFCDlg::OnInitDialog()
 	
 	CefString csUrl = "https://cn.bing.com/";
 	csUrl = "https://www.bilibili.com/video/av55944365?spm_id_from=333.334.b_62696c695f6164.9";
+	csUrl = "http://www.ip138.com/";
 	CefBrowserHost::CreateBrowser(info, g_BrowsersHandler.get(), csUrl, browserSettings, NULL, NULL);
 
 	return TRUE;  // 除非将焦点设置到控件，否则返回 TRUE
