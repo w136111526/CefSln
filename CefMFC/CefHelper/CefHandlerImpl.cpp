@@ -168,10 +168,24 @@ void CCefHandlerImpl::OnContextInitialized()
 	CEF_REQUIRE_UI_THREAD();
 }
 
-void CCefHandlerImpl::OnBeforeCommandLineProcessing(CefRefPtr<CCefHandlerImpl> app, CefRefPtr<CefCommandLine> command_line)
+
+void CCefHandlerImpl::OnBeforeCommandLineProcessing(const CefString& process_type, CefRefPtr<CefCommandLine> command_line)
 {
+	AfxMessageBox(_T("CCefHandlerImpl::OnBeforeCommandLineProcessing"));
+	OutputDebugStringA("CCefHandlerImpl::OnBeforeCommandLineProcessing");
 	command_line->AppendSwitch("--disable-web-security");	// 关闭同源策略
-	//command_line->AppendSwitch("--enable-system-flash");	// 使用系统flash
+	command_line->AppendSwitch("--enable-system-flash");	// 使用系统flash
 	command_line->AppendSwitchWithValue("ppapi-flash-version", "32.0.0.207");
 	command_line->AppendSwitchWithValue("ppapi-flash-path", "PepperFlash\\pepflashplayer.dll");
+
+	// 此参数解决多窗口问题
+	command_line->AppendSwitch("process-per-site");
+	command_line->AppendSwitch("enable-npapi");
+	command_line->AppendSwitchWithValue("register-pepper-plugins", "PepperFlash\\pepflashplayer.dll;application/x-shockwave-flash");
+}
+
+void CCefHandlerImpl::OnBeforeChildProcessLaunch(CefRefPtr<CefCommandLine> command_line)
+{
+	OutputDebugStringA("CCefHandlerImpl::OnBeforeChildProcessLaunch");
+	
 }
