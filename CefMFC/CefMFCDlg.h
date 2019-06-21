@@ -3,7 +3,8 @@
 //
 
 #pragma once
-
+#include <cef\include\cef_client.h>
+#include <cef\include\cef_app.h>
 
 // CCefMFCDlg ¶Ô»°¿ò
 class CCefMFCDlg : public CDialogEx
