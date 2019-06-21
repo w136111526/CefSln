@@ -65,6 +65,7 @@ BEGIN_MESSAGE_MAP(CCefMFCDlg, CDialogEx)
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
 	ON_WM_SIZE()
+	ON_WM_CLOSE()
 END_MESSAGE_MAP()
 
 
@@ -182,4 +183,14 @@ void CCefMFCDlg::OnSize(UINT nType, int cx, int cy)
 			::MoveWindow(hwnd, 0, 60, cx, cy - 60, true);
 		}
 	}
+}
+
+
+void CCefMFCDlg::OnClose()
+{
+	// TODO:  在此添加消息处理程序代码和/或调用默认值
+	//g_BrowsersHandler->CloseAllBrowsers(true);
+	//g_BrowsersHandler->Release();
+
+	CDialogEx::OnClose();
 }
