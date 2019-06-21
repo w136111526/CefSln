@@ -10,6 +10,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cefclient", "cefclient\cefc
 		{8D8DE242-4755-4A84-910A-C9E618C8692D} = {8D8DE242-4755-4A84-910A-C9E618C8692D}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CefMFC", "CefMFC\CefMFC.vcxproj", "{405523B9-EA07-4833-AC13-81BCED620892}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -24,6 +26,10 @@ Global
 		{B53C5DF0-E612-497C-96F0-C27E80579B61}.Debug|Win32.Build.0 = Debug|Win32
 		{B53C5DF0-E612-497C-96F0-C27E80579B61}.Release|Win32.ActiveCfg = Release|Win32
 		{B53C5DF0-E612-497C-96F0-C27E80579B61}.Release|Win32.Build.0 = Release|Win32
+		{405523B9-EA07-4833-AC13-81BCED620892}.Debug|Win32.ActiveCfg = Debug|Win32
+		{405523B9-EA07-4833-AC13-81BCED620892}.Debug|Win32.Build.0 = Debug|Win32
+		{405523B9-EA07-4833-AC13-81BCED620892}.Release|Win32.ActiveCfg = Release|Win32
+		{405523B9-EA07-4833-AC13-81BCED620892}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
