@@ -162,3 +162,16 @@ void CCefHandlerImpl::NotifyBrowserClosed(CefRefPtr<CefBrowser> browser)
 {
 	
 }
+
+void CCefHandlerImpl::OnContextInitialized()
+{
+	CEF_REQUIRE_UI_THREAD();
+}
+
+void CCefHandlerImpl::OnBeforeCommandLineProcessing(CefRefPtr<CCefHandlerImpl> app, CefRefPtr<CefCommandLine> command_line)
+{
+	command_line->AppendSwitch("--disable-web-security");	// 关闭同源策略
+	//command_line->AppendSwitch("--enable-system-flash");	// 使用系统flash
+	command_line->AppendSwitchWithValue("ppapi-flash-version", "32.0.0.207");
+	command_line->AppendSwitchWithValue("ppapi-flash-path", "PepperFlash\\pepflashplayer.dll");
+}

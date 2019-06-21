@@ -1,5 +1,7 @@
 #pragma once
 #include <cef\include\cef_client.h>
+#include <cef\include\cef_command_line.h>
+#include <cef\include\cef_browser_process_handler.h>
 #include <cef\include\wrapper\cef_helpers.h>
 #include <cef\include\views\cef_browser_view.h>
 #include <cef\include\views\cef_window.h>
@@ -11,13 +13,18 @@ class CCefHandlerImpl:
 	public CefClient,
 	public CefDisplayHandler,
 	public CefLifeSpanHandler,
-	public CefLoadHandler
+	public CefLoadHandler,
+	public CefBrowserProcessHandler
 {
 public:
 	CCefHandlerImpl();
 	~CCefHandlerImpl();
 
 	static  CCefHandlerImpl *getInstance();
+
+	// CefBrowserProcessHandler methods:
+	virtual void OnContextInitialized();
+	virtual void OnBeforeCommandLineProcessing(CefRefPtr<CCefHandlerImpl> app, CefRefPtr<CefCommandLine> command_line);
 
 	// Execute Delegate notifications on the main thread.
 	void NotifyBrowserCreated(CefRefPtr<CefBrowser> browser);
