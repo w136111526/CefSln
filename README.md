@@ -12,6 +12,7 @@ $(SolutionDir)sdk\cef
 $(SolutionDir)build\
 
 cef下加载flash
+https://blog.csdn.net/xiaonaiquan/article/details/76692497
 https://blog.csdn.net/x356982611/article/details/52291122
 
 一步步CEF（1）之编译libcef_dll_wrapper.lib
