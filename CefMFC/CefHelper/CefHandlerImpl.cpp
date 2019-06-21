@@ -181,9 +181,10 @@ void CCefHandlerImpl::OnBeforeCommandLineProcessing(const CefString& process_typ
 	// 此参数解决多窗口问题
 	command_line->AppendSwitch("--process-per-site");
 	
+	//代理
 	//command_line->AppendSwitch("no-proxy-server");
-	command_line->AppendSwitch("--proxy-server=\"http://127.0.0.1:666\"");
-	//command_line->AppendSwitch("--proxy-server=http://127.0.0.1:9999");
+	//command_line->AppendSwitchWithValue("--proxy-server", "127.0.0.1:9999");
+	//command_line->AppendSwitchWithValue("--proxy-server", "http://127.0.0.1:9999");
 }
 
 void CCefHandlerImpl::OnBeforeChildProcessLaunch(CefRefPtr<CefCommandLine> command_line)
