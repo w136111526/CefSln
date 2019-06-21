@@ -92,6 +92,7 @@ BOOL CCefMFCApp::InitInstance()
 		cSettings.no_sandbox = true;
 		cSettings.ignore_certificate_errors = true;		//忽略掉ssl证书验证错误
 		CefString(&cSettings.locale).FromASCII("zh-CN");
+		CefString(&cSettings.cache_path).FromASCII("cache");
 
 		CefRefPtr<CCefHandlerImpl> cefHandlerImpl = new CCefHandlerImpl;
 		CefInitialize(main_args, cSettings, cefHandlerImpl, NULL);
