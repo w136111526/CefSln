@@ -77,7 +77,7 @@ BOOL CCefMFCApp::InitInstance()
 
 		CefMainArgs main_args(m_hInstance);
 		int exit_code = CefExecuteProcess(main_args, NULL, NULL);
-		ASSERT(exit_code < 0);
+		//ASSERT(exit_code < 0);
 		
 		// 注意：CefSettings的 multi_threaded_message_loop 变量必须设置为true
 		// （当你开发的工程是基于Win32窗口），只有控制台程序才可以设置为false。
