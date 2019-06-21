@@ -7,8 +7,13 @@ D3D11.lib
 imm32.lib
 OPENGL32.LIB
 
+$(ProjectDir)\include 
+
 一步步CEF（1）之编译libcef_dll_wrapper.lib
 https://blog.csdn.net/ftpleopard/article/details/84870054
+
+MFC对话框中调用CEF浏览器控件（使用2018年新版本的CEF SDK）
+https://blog.csdn.net/toshiba689/article/details/86751028
 
 工程--属性--C/C++  --预处理器定义：
 WRAPPING_CEF_SHARED
