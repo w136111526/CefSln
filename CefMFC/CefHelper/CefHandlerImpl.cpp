@@ -175,8 +175,8 @@ void CCefHandlerImpl::OnBeforeCommandLineProcessing(const CefString& process_typ
 	OutputDebugStringA("CCefHandlerImpl::OnBeforeCommandLineProcessing");
 	command_line->AppendSwitch("--disable-web-security");	// 关闭同源策略
 	command_line->AppendSwitch("--enable-system-flash");	// 使用系统flash
-	command_line->AppendSwitchWithValue("ppapi-flash-version", "32.0.0.207");
-	command_line->AppendSwitchWithValue("ppapi-flash-path", "PepperFlash\\pepflashplayer.dll");
+	command_line->AppendSwitchWithValue("--ppapi-flash-version", "32.0.0.207");
+	command_line->AppendSwitchWithValue("--ppapi-flash-path", "PepperFlash\\pepflashplayer.dll");
 
 	//加载flash插件
 	//command_line->AppendSwitchWithValue("--ppapi-flash-path", "ppflash/18_0_0_209/pepflashplayer32_18_0_0_209.dll");
