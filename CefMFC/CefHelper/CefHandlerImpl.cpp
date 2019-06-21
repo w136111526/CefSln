@@ -4,9 +4,17 @@
 
 CCefHandlerImpl::CCefHandlerImpl()
 {
+
 }
 
 
 CCefHandlerImpl::~CCefHandlerImpl()
 {
+
+}
+
+CCefHandlerImpl* CCefHandlerImpl::getInstance()
+{
+	static CCefHandlerImpl inst;
+	return &inst;
 }
