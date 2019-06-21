@@ -5,6 +5,7 @@
 #include "stdafx.h"
 #include "CefMFC.h"
 #include "CefMFCDlg.h"
+#include <cef\include\cef_app.h>
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -70,6 +71,25 @@ BOOL CCefMFCApp::InitInstance()
 	// 例如修改为公司或组织名
 	SetRegistryKey(_T("应用程序向导生成的本地应用程序"));
 
+	// 初始化cef
+	{
+		CefEnableHighDPISupport();
+
+		CefMainArgs main_args(m_hInstance);
+		int exit_code = CefExecuteProcess(main_args, NULL, NULL);
+		ASSERT(exit_code < 0);
+		
+		// 注意：CefSettings的 multi_threaded_message_loop 变量必须设置为true
+		// （当你开发的工程是基于Win32窗口），只有控制台程序才可以设置为false。
+		CefSettings cSettings;
+		//CefSettingsTraits::init(&cSettings);
+		cSettings.multi_threaded_message_loop = true;
+		cSettings.no_sandbox = true;
+
+		CefRefPtr<CefApp>spApp;
+		CefInitialize(main_args, cSettings, spApp, NULL);
+	}
+
 	CCefMFCDlg dlg;
 	m_pMainWnd = &dlg;
 	INT_PTR nResponse = dlg.DoModal();
@@ -94,6 +114,8 @@ BOOL CCefMFCApp::InitInstance()
 	{
 		delete pShellManager;
 	}
+
+	CefShutdown();
 
 	// 由于对话框已关闭，所以将返回 FALSE 以便退出应用程序，
 	//  而不是启动应用程序的消息泵。
