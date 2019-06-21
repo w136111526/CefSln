@@ -120,10 +120,17 @@ BOOL CCefMFCApp::InitInstance()
 		delete pShellManager;
 	}
 
-	CefShutdown();
-
 	// 由于对话框已关闭，所以将返回 FALSE 以便退出应用程序，
 	//  而不是启动应用程序的消息泵。
 	return FALSE;
 }
 
+
+
+int CCefMFCApp::ExitInstance()
+{
+	// TODO:  在此添加专用代码和/或调用基类
+	CefShutdown();
+
+	return CWinApp::ExitInstance();
+}
