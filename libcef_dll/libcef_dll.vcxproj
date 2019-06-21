@@ -42,10 +42,12 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>../build/</OutDir>
     <IncludePath>$(SolutionDir)sdk\cef;$(ProjectDir);$(IncludePath)</IncludePath>
+    <TargetName>libcef_dll_wrapper_debug</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>../build/</OutDir>
     <IncludePath>$(SolutionDir)sdk\cef;$(IncludePath)</IncludePath>
+    <TargetName>libcef_dll_wrapper</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
