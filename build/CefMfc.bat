@@ -1,0 +1,1 @@
+CefMfc.exe --ppapi-flash-path=PepperFlash\\pepflashplayer.dll --ppapi-flash-version=32.0.0.207
