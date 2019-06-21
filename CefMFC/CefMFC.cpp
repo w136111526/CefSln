@@ -130,7 +130,11 @@ BOOL CCefMFCApp::InitInstance()
 int CCefMFCApp::ExitInstance()
 {
 	// TODO:  在此添加专用代码和/或调用基类
+
+	// 调试版本调用 CefShutdown 会导致程序崩溃
+#ifndef _DEBUG
 	CefShutdown();
+#endif
 
 	return CWinApp::ExitInstance();
 }

@@ -67,6 +67,9 @@ bool CCefHandlerImpl::DoClose(CefRefPtr<CefBrowser> browser)
 	// Allow the close. For windowed browsers this will result in the OS close
 	// event being sent.
 	return false;
+	//is_closing_ = true;
+	//return true;
+
 }
 
 void CCefHandlerImpl::OnBeforeClose(CefRefPtr<CefBrowser> browser)
