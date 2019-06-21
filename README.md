@@ -8,6 +8,7 @@ imm32.lib
 OPENGL32.LIB
 
 $(ProjectDir)\include 
+$(SolutionDir)sdk\cef
 
 一步步CEF（1）之编译libcef_dll_wrapper.lib
 https://blog.csdn.net/ftpleopard/article/details/84870054
