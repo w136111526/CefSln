@@ -83,7 +83,8 @@ void CCefHandlerImpl::OnBeforeClose(CefRefPtr<CefBrowser> browser)
 
 	if (browser_list_.empty()) {
 		// All browser windows have closed. Quit the application message loop.
-		// CefQuitMessageLoop(); //PP: 控制台程序才需要调用这个函数，如果是MFC应用程序，要把这句注释掉，否则执行到这里会报错！
+		//cef_quit_message_loop();
+		//CefQuitMessageLoop(); //PP: 控制台程序才需要调用这个函数，如果是MFC应用程序，要把这句注释掉，否则执行到这里会报错！
 	}
 }
 

@@ -4,6 +4,7 @@
 #include <cef\include\views\cef_browser_view.h>
 #include <cef\include\views\cef_window.h>
 #include <cef\include\wrapper\cef_closure_task.h>
+#include <cef\include\capi\cef_app_capi.h>
 #include <list>
 
 class CCefHandlerImpl:

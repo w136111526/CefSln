@@ -89,6 +89,7 @@ BOOL CCefMFCApp::InitInstance()
 		//CefSettingsTraits::init(&cSettings);
 		cSettings.multi_threaded_message_loop = true;
 		cSettings.no_sandbox = true;
+		
 
 		CefRefPtr<CefApp>spApp;
 		CefInitialize(main_args, cSettings, spApp, NULL);
