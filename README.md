@@ -9,6 +9,7 @@ OPENGL32.LIB
 
 $(ProjectDir)\include 
 $(SolutionDir)sdk\cef
+$(SolutionDir)build\
 
 一步步CEF（1）之编译libcef_dll_wrapper.lib
 https://blog.csdn.net/ftpleopard/article/details/84870054
