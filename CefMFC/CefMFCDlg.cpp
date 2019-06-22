@@ -113,8 +113,12 @@ BOOL CCefMFCDlg::OnInitDialog()
 	CefBrowserSettings browserSettings;
 	
 	CefString csUrl = "https://cn.bing.com/";
-	csUrl = "https://www.bilibili.com/video/av55944365?spm_id_from=333.334.b_62696c695f6164.9";
-	csUrl = "http://www.ip138.com/";
+	//csUrl = "https://www.bilibili.com/video/av55944365?spm_id_from=333.334.b_62696c695f6164.9";
+	//csUrl = "http://www.ip138.com/";
+	//csUrl = "https://helpx.adobe.com/flash-player/kb/archived-flash-player-versions.html";
+	//csUrl = "http://moni.dhfpp.com/web/login.htm";
+	//csUrl = "https://paimai.alltobid.com/bid/b901b3c0ba414c3bb7c08761aedbff50/login.htm?tdsourcetag=s_pcqq_aiomsg";
+	csUrl = "https://test.alltobid.com";
 	CefBrowserHost::CreateBrowser(info, g_BrowsersHandler.get(), csUrl, browserSettings, NULL, NULL);
 
 	return TRUE;  // 除非将焦点设置到控件，否则返回 TRUE

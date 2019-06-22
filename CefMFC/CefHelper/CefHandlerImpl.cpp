@@ -176,7 +176,7 @@ void CCefHandlerImpl::OnBeforeCommandLineProcessing(const CefString& process_typ
 	command_line->AppendSwitch("--allow-outdated-plugins"); // 允许允许低版本flash
 	command_line->AppendSwitch("--disable-web-security");	// 关闭同源策略
 	//command_line->AppendSwitch("--enable-system-flash");	// 使用系统flash
-	command_line->AppendSwitchWithValue("--ppapi-flash-version", "32.0.0.207");
+	command_line->AppendSwitchWithValue("--ppapi-flash-version", "28.0.0.137");
 	command_line->AppendSwitchWithValue("--ppapi-flash-path", "PepperFlash\\pepflashplayer.dll");
 
 	// 此参数解决多窗口问题
