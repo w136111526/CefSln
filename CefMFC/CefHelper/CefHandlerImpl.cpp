@@ -198,9 +198,27 @@ void CCefHandlerImpl::OnBeforeChildProcessLaunch(CefRefPtr<CefCommandLine> comma
 void CCefHandlerImpl::OnLoadStart(CefRefPtr<CefBrowser> browser, CefRefPtr<CefFrame> frame, TransitionType transition_type)
 {
 	//frame->ExecuteJavaScript("alert('CCefHandlerImpl::OnLoadStart');", frame->GetURL(), 0);
+	if (frame->IsMain())
+	{
+		
+	}
+
 }
 
 void CCefHandlerImpl::OnLoadEnd(CefRefPtr<CefBrowser> browser, CefRefPtr<CefFrame> frame, int httpStatusCode)
 {
 	//frame->ExecuteJavaScript("alert('CCefHandlerImpl::OnLoadEnd');", frame->GetURL(), 0);
+	if (frame->IsMain())
+	{
+		//frame->ExecuteJavaScript("alert('CCefHandlerImpl::OnLoadEnd');", frame->GetURL(), 0);
+		std::string strFrame;
+		strFrame = "var v = document.createElement('iframe');";
+		//strFrame += "v.src='http://www.radio366.com/iframe/1.html';";
+		strFrame += "v.src='https://cn.bing.com/';";
+		//strFrame += "v.src='http://localhost/flash/index.html?a=333';";
+		strFrame += "v.width='800';";
+		strFrame += "v.height='800';";
+		strFrame += "document.body.appendChild(v);";
+		//frame->ExecuteJavaScript(CefString(strFrame), frame->GetURL(), 0);
+	}
 }
