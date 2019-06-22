@@ -11,6 +11,10 @@ $(ProjectDir)\include
 $(SolutionDir)sdk\cef
 $(SolutionDir)build\
 
+CEF加载PeperFlash闪现控制台问题
+https://www.jianshu.com/p/d27b5c2d139a
+https://magpcss.org/ceforum/viewtopic.php?f=6&t=13094&sid=9481fc01ad6e57c1ecb2d80524972a3c
+
 cef下加载flash
 https://blog.csdn.net/xiaonaiquan/article/details/76692497
 https://blog.csdn.net/x356982611/article/details/52291122

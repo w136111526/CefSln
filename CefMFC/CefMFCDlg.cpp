@@ -120,6 +120,7 @@ BOOL CCefMFCDlg::OnInitDialog()
 	//csUrl = "https://paimai.alltobid.com/bid/b901b3c0ba414c3bb7c08761aedbff50/login.htm?tdsourcetag=s_pcqq_aiomsg";
 	//csUrl = "https://test.alltobid.com";
 	csUrl = "http://www.radio366.com/bf.asp?bh=1";
+	//csUrl = "chrome://plugins";
 	CefBrowserHost::CreateBrowser(info, g_BrowsersHandler.get(), csUrl, browserSettings, NULL, NULL);
 
 	return TRUE;  // 除非将焦点设置到控件，否则返回 TRUE
