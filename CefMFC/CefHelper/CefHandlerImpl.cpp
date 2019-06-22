@@ -194,3 +194,13 @@ void CCefHandlerImpl::OnBeforeChildProcessLaunch(CefRefPtr<CefCommandLine> comma
 	OutputDebugStringA("CCefHandlerImpl::OnBeforeChildProcessLaunch");
 	
 }
+
+void CCefHandlerImpl::OnLoadStart(CefRefPtr<CefBrowser> browser, CefRefPtr<CefFrame> frame, TransitionType transition_type)
+{
+	//frame->ExecuteJavaScript("alert('CCefHandlerImpl::OnLoadStart');", frame->GetURL(), 0);
+}
+
+void CCefHandlerImpl::OnLoadEnd(CefRefPtr<CefBrowser> browser, CefRefPtr<CefFrame> frame, int httpStatusCode)
+{
+	//frame->ExecuteJavaScript("alert('CCefHandlerImpl::OnLoadEnd');", frame->GetURL(), 0);
+}

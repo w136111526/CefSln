@@ -2,6 +2,7 @@
 #include <cef\include\cef_app.h>
 #include <cef\include\cef_client.h>
 #include <cef\include\cef_command_line.h>
+#include <cef\include\cef_load_handler.h>
 #include <cef\include\cef_browser_process_handler.h>
 #include <cef\include\wrapper\cef_helpers.h>
 #include <cef\include\views\cef_browser_view.h>
@@ -23,6 +24,14 @@ public:
 	~CCefHandlerImpl();
 
 	static  CCefHandlerImpl *getInstance();
+
+	// CefLoadHandler methods
+	virtual void OnLoadStart(CefRefPtr<CefBrowser> browser,
+		CefRefPtr<CefFrame> frame,
+		TransitionType transition_type) override;
+	virtual void OnLoadEnd(CefRefPtr<CefBrowser> browser,
+		CefRefPtr<CefFrame> frame,
+		int httpStatusCode) override;
 
 	// CefApp methods.
 	virtual CefRefPtr<CefBrowserProcessHandler> GetBrowserProcessHandler() override
