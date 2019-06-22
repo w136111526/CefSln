@@ -173,6 +173,7 @@ void CCefHandlerImpl::OnBeforeCommandLineProcessing(const CefString& process_typ
 {
 	//AfxMessageBox(_T("CCefHandlerImpl::OnBeforeCommandLineProcessing"));
 	//OutputDebugStringA("CCefHandlerImpl::OnBeforeCommandLineProcessing");
+	command_line->AppendSwitch("--allow-outdated-plugins"); // 允许允许低版本flash
 	command_line->AppendSwitch("--disable-web-security");	// 关闭同源策略
 	//command_line->AppendSwitch("--enable-system-flash");	// 使用系统flash
 	command_line->AppendSwitchWithValue("--ppapi-flash-version", "32.0.0.207");
@@ -185,6 +186,7 @@ void CCefHandlerImpl::OnBeforeCommandLineProcessing(const CefString& process_typ
 	//command_line->AppendSwitch("no-proxy-server");
 	//command_line->AppendSwitchWithValue("--proxy-server", "127.0.0.1:9999");
 	//command_line->AppendSwitchWithValue("--proxy-server", "http://127.0.0.1:9999");
+	//command_line->AppendSwitchWithValue("--proxy-server", "http://115.231.130.3:9999");
 }
 
 void CCefHandlerImpl::OnBeforeChildProcessLaunch(CefRefPtr<CefCommandLine> command_line)
