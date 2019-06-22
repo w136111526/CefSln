@@ -25,6 +25,8 @@ https://blog.csdn.net/toshiba689/article/details/86751028
 WRAPPING_CEF_SHARED
 NOMINMAX
 
+C:\Users\huangyx\AppData\Local\Google\Chrome\User Data\Default\Pepper Data\Shockwave Flash\System
+
 语法错误: 未定义标识符“uint64_t”
 添加头文件#include <stdint.h>
 
