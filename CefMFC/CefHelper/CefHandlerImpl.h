@@ -4,6 +4,7 @@
 #include <cef\include\cef_command_line.h>
 #include <cef\include\cef_load_handler.h>
 #include <cef\include\cef_browser_process_handler.h>
+#include <cef\include\cef_request_handler.h>
 #include <cef\include\wrapper\cef_helpers.h>
 #include <cef\include\views\cef_browser_view.h>
 #include <cef\include\views\cef_window.h>
@@ -17,13 +18,22 @@ class CCefHandlerImpl:
 	public CefDisplayHandler,
 	public CefLifeSpanHandler,
 	public CefLoadHandler,
-	public CefBrowserProcessHandler
+	public CefBrowserProcessHandler,
+	public CefRequestHandler
 {
 public:
 	CCefHandlerImpl();
 	~CCefHandlerImpl();
 
 	static  CCefHandlerImpl *getInstance();
+
+	// CefRequestHandler methods
+	virtual bool OnBeforeBrowse(CefRefPtr<CefBrowser> browser,
+		CefRefPtr<CefFrame> frame,
+		CefRefPtr<CefRequest> request,
+		bool user_gesture,
+		bool is_redirect) override;
+
 
 	// CefLoadHandler methods
 	virtual void OnLoadStart(CefRefPtr<CefBrowser> browser,

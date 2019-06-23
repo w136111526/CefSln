@@ -198,16 +198,19 @@ void CCefHandlerImpl::OnBeforeChildProcessLaunch(CefRefPtr<CefCommandLine> comma
 
 void CCefHandlerImpl::OnLoadStart(CefRefPtr<CefBrowser> browser, CefRefPtr<CefFrame> frame, TransitionType transition_type)
 {
+	//OutputDebugString(frame->GetURL().c_str());
 	//frame->ExecuteJavaScript("alert('CCefHandlerImpl::OnLoadStart');", frame->GetURL(), 0);
 	if (frame->IsMain())
 	{
 		
 	}
 
+	
 }
 
 void CCefHandlerImpl::OnLoadEnd(CefRefPtr<CefBrowser> browser, CefRefPtr<CefFrame> frame, int httpStatusCode)
 {
+	//OutputDebugString(frame->GetURL().c_str());
 	//frame->ExecuteJavaScript("alert('CCefHandlerImpl::OnLoadEnd');", frame->GetURL(), 0);
 	if (frame->IsMain())
 	{
@@ -222,4 +225,15 @@ void CCefHandlerImpl::OnLoadEnd(CefRefPtr<CefBrowser> browser, CefRefPtr<CefFram
 		strFrame += "document.body.appendChild(v);";
 		//frame->ExecuteJavaScript(CefString(strFrame), frame->GetURL(), 0);
 	}
+}
+
+bool CCefHandlerImpl::OnBeforeBrowse(CefRefPtr<CefBrowser> browser, CefRefPtr<CefFrame> frame, CefRefPtr<CefRequest> request, bool user_gesture, bool is_redirect)
+{
+	// Return true to cancel the navigation
+	// Return false to allow the navigation to proceed
+
+	// OutputDebugStringA("CCefHandlerImpl::OnBeforeBrowse");
+	// OutputDebugString(frame->GetURL().c_str());
+
+	return false;
 }
