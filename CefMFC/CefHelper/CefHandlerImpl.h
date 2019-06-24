@@ -92,6 +92,7 @@ public:
 		return this;
 	}
 	virtual CefRefPtr<CefLoadHandler> GetLoadHandler() OVERRIDE{ return this; }
+	virtual CefRefPtr<CefRequestHandler> GetRequestHandler() OVERRIDE { return this; }
 
 
 	// CefDisplayHandler methods:

@@ -233,16 +233,16 @@ bool CCefHandlerImpl::OnBeforeBrowse(CefRefPtr<CefBrowser> browser, CefRefPtr<Ce
 	// Return true to cancel the navigation
 	// Return false to allow the navigation to proceed
 
-	// OutputDebugStringA("CCefHandlerImpl::OnBeforeBrowse");
-	// OutputDebugString(frame->GetURL().c_str());
+	OutputDebugStringA("CCefHandlerImpl::OnBeforeBrowse \n");
+	OutputDebugString(frame->GetURL().c_str());
 
 	return false;
 }
 
 CefResourceRequestHandler::ReturnValue CCefHandlerImpl::OnBeforeResourceLoad(CefRefPtr<CefBrowser> browser, CefRefPtr<CefFrame> frame, CefRefPtr<CefRequest> request, CefRefPtr<CefRequestCallback> callback)
 {
-	OutputDebugStringA("CCefHandlerImpl::OnBeforeResourceLoad");
+	OutputDebugStringA("CCefHandlerImpl::OnBeforeResourceLoad \n");
 	OutputDebugString(frame->GetURL().c_str());
-	AfxMessageBox(frame->GetURL().c_str());
+	//AfxMessageBox(frame->GetURL().c_str());
 	return RV_CONTINUE;
 }
