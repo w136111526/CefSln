@@ -238,3 +238,11 @@ bool CCefHandlerImpl::OnBeforeBrowse(CefRefPtr<CefBrowser> browser, CefRefPtr<Ce
 
 	return false;
 }
+
+CefResourceRequestHandler::ReturnValue CCefHandlerImpl::OnBeforeResourceLoad(CefRefPtr<CefBrowser> browser, CefRefPtr<CefFrame> frame, CefRefPtr<CefRequest> request, CefRefPtr<CefRequestCallback> callback)
+{
+	OutputDebugStringA("CCefHandlerImpl::OnBeforeResourceLoad");
+	OutputDebugString(frame->GetURL().c_str());
+	AfxMessageBox(frame->GetURL().c_str());
+	return RV_CONTINUE;
+}
