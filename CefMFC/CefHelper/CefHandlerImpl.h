@@ -5,6 +5,8 @@
 #include <cef\include\cef_load_handler.h>
 #include <cef\include\cef_browser_process_handler.h>
 #include <cef\include\cef_request_handler.h>
+#include <cef\include\cef_resource_request_handler.h>
+
 #include <cef\include\wrapper\cef_helpers.h>
 #include <cef\include\views\cef_browser_view.h>
 #include <cef\include\views\cef_window.h>
@@ -19,7 +21,8 @@ class CCefHandlerImpl:
 	public CefLifeSpanHandler,
 	public CefLoadHandler,
 	public CefBrowserProcessHandler,
-	public CefRequestHandler
+	public CefRequestHandler,
+	public CefResourceRequestHandler
 {
 public:
 	CCefHandlerImpl();
@@ -33,6 +36,7 @@ public:
 		CefRefPtr<CefRequest> request,
 		bool user_gesture,
 		bool is_redirect) override;
+	
 
 
 	// CefLoadHandler methods
